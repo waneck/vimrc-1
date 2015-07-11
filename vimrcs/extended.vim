@@ -36,8 +36,10 @@ if has("gui_running")
     set background=dark
     colorscheme peaksea
 else
-    colorscheme desert
-    let g:colors_name="desert"
+		se t_Co=256
+		let g:gruvbox_italic=0
+    colors gruvbox
+    let g:colors_name="gruvbox"
 endif
 
 
@@ -145,3 +147,27 @@ endfunc
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
 endfunc
+
+" always disable mouse
+set mouse=
+
+"warn if file changed
+au FileChangedShell * echo "Warning: File changed on disk"
+
+"highlight variable under cursor
+:autocmd CursorMoved * exe printf('match CursorColumn /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
+"set paste toggle for F2
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+" some shortcuts for save and make
+map <F5> <ESC>:make<CR>
+map <F8> <ESC>:w<CR>
+
+" Change directories automatically
+autocmd BufEnter * lcd %:p:h
+
+map J gT
+map K gt

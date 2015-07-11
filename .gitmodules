@@ -4,3 +4,9 @@
 [submodule "sources_non_forked/gruvbox"]
 	path = sources_non_forked/gruvbox
 	url = git@github.com:morhetz/gruvbox.git
+[submodule "sources_non_forked/vaxe.vim"]
+	path = sources_non_forked/vaxe.vim
+	url = https://github.com/jdonaldson/vaxe.git
+[submodule "sources_non_forked/tcomment.vim"]
+	path = sources_non_forked/tcomment.vim
+	url = https://github.com/tomtom/tcomment_vim.git

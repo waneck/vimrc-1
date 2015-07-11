@@ -44,9 +44,9 @@ endif
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_map = '<c-f>'
+let g:ctrlp_map = '<c-p>'
 map <leader>j :CtrlP<cr>
-map <c-b> :CtrlPBuffer<cr>
+map <leader>b :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
@@ -116,3 +116,30 @@ nnoremap <silent> <leader>z :Goyo<cr>
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers=['pyflakes']
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => TComment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call tcomment#DefineType('haxe',                '// %s'    )
+call tcomment#DefineType('haxe_inline',         g:tcommentInlineC  )
+call tcomment#DefineType('haxe_block',          g:tcommentBlockC   )
+
+map <C-E> :TComment<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vaxe
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" better completion shortcut
+inoremap <C-Space> <C-X><C-O>
+inoremap <Nul> <C-X><C-O>
+
+map <leader><C-I> <ESC>:call vaxe#ImportClass()<CR>
+map <leader><C-T> <ESC>:call vaxe#Ctags()<CR>
+
+
+if !exists('g:neocomplcache_omni_patterns')
+	let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.haxe = '\v([\]''"]|\w)(\.|\()'
