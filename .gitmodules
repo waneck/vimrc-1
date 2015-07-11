@@ -3,7 +3,7 @@
 	url = git://github.com/airblade/vim-gitgutter.git
 [submodule "sources_non_forked/gruvbox"]
 	path = sources_non_forked/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
+	url = git://github.com/morhetz/gruvbox.git
 [submodule "sources_non_forked/vaxe.vim"]
 	path = sources_non_forked/vaxe.vim
 	url = https://github.com/jdonaldson/vaxe.git
