@@ -163,8 +163,10 @@ set pastetoggle=<F2>
 set showmode
 
 " some shortcuts for save and make
-map <F5> <ESC>:make<CR>
-map <F8> <ESC>:w<CR>
+noremap <F5> <ESC>:make<CR>
+inoremap <F5> <ESC>:make<CR>
+noremap <F8> <ESC>:w<CR>
+inoremap <F8> <ESC>:w<CR>
 
 " Change directories automatically
 autocmd BufEnter * lcd %:p:h
