@@ -169,5 +169,13 @@ map <F8> <ESC>:w<CR>
 " Change directories automatically
 autocmd BufEnter * lcd %:p:h
 
+" easy cycle between tabs
 map J gT
 map K gt
+
+" interaction with copy/paste
+
+noremap <leader>c "+y
+vnoremap <leader>c "+y
+noremap <leader>v "+p
+vnoremap <leader>v "+p
