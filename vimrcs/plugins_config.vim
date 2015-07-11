@@ -143,3 +143,9 @@ if !exists('g:neocomplcache_omni_patterns')
 	let g:neocomplcache_omni_patterns = {}
 endif
 let g:neocomplcache_omni_patterns.haxe = '\v([\]''"]|\w)(\.|\()'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Goyo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <F6> <ESC>:Goyo<CR>
