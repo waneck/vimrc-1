@@ -191,3 +191,7 @@ highlight NonText guifg=#4a4a59 ctermfg=236
 highlight SpecialKey guifg=#4a4a59 ctermfg=236
 
 nmap <leader>l :set list!<CR>
+
+ " Expand the command line using tab
+ set wildmenu
+ set wildmode=list:longest,full
