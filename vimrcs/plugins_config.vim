@@ -42,10 +42,7 @@ endif
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-
 let g:ctrlp_map = '<c-p>'
-map <leader>j :CtrlP<cr>
 map <leader>b :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
