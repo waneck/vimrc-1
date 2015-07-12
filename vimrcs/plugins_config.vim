@@ -144,6 +144,8 @@ if !exists('g:neocomplcache_omni_patterns')
 endif
 let g:neocomplcache_omni_patterns.haxe = '\v([\]''"]|\w)(\.|\()'
 
+set autowrite
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Goyo
