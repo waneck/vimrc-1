@@ -181,3 +181,13 @@ noremap <leader>c "+y
 vnoremap <leader>c "+y
 noremap <leader>v "+p
 vnoremap <leader>v "+p
+
+" See tabs
+set list
+set listchars=tab:▸\ 
+
+"Invisible character colors 
+highlight NonText guifg=#4a4a59 ctermfg=236
+highlight SpecialKey guifg=#4a4a59 ctermfg=236
+
+nmap <leader>l :set list!<CR>
