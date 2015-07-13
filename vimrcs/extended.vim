@@ -196,3 +196,20 @@ nmap <leader>l :set list!<CR>
 set wildmenu
 set wildmode=list:longest,full
 
+" Set options for autocompletion
+set noinfercase
+
+filetype plugin indent on
+
+" Remove GUI-nonsense
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+
+" Always show the menu, insert longest match
+" see http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+set completeopt=menu,longest,preview
+
