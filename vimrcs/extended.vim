@@ -187,11 +187,12 @@ set list
 set listchars=tab:▸\ 
 
 "Invisible character colors 
-highlight NonText guifg=#4a4a59 ctermfg=236
-highlight SpecialKey guifg=#4a4a59 ctermfg=236
+highlight NonText guifg=#4a4a59 ctermfg=235
+highlight SpecialKey guifg=#4a4a59 ctermfg=235
 
 nmap <leader>l :set list!<CR>
 
- " Expand the command line using tab
- set wildmenu
- set wildmode=list:longest,full
+" Expand the command line using tab
+set wildmenu
+set wildmode=list:longest,full
+

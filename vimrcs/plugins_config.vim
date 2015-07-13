@@ -132,8 +132,10 @@ map <C-E> :TComment<CR>
 inoremap <C-Space> <C-X><C-O>
 inoremap <Nul> <C-X><C-O>
 
-map <leader><C-I> <ESC>:call vaxe#ImportClass()<CR>
-map <leader><C-T> <ESC>:call vaxe#Ctags()<CR>
+map <leader>i <ESC>:call vaxe#ImportClass()<CR>
+map <leader>hc <ESC>:call vaxe#Ctags()<CR>
+map <leader>hh <ESC>:call vaxe#ProjectHxml()<CR>
+map <leader>ho <ESC>:call vaxe#OpenHxml()<CR>
 
 
 if !exists('g:neocomplcache_omni_patterns')
@@ -143,6 +145,11 @@ let g:neocomplcache_omni_patterns.haxe = '\v([\]''"]|\w)(\.|\()'
 
 set autowrite
 
+" use completion cache server
+let g:vaxe_cache_server = 1
+
+" use absolute paths for hxmls
+let g:vaxe_trace_absolute_path = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Goyo
