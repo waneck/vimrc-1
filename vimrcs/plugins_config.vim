@@ -189,3 +189,9 @@ map <F6> <ESC>:Goyo<CR>
 " Let tab be available for snipmate
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CtrlPHaxelibs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_extensions = ['haxelibs']
+map <C-l> <ESC>:CtrlPHaxelibs<CR>
