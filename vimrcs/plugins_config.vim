@@ -129,8 +129,9 @@ map <C-E> :TComment<CR>
 " => Vaxe
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " better completion shortcut
-inoremap <C-Space> <C-X><C-O>
-inoremap <Nul> <C-X><C-O>
+" (disabled because YouCompleteMe supersedes it)
+" inoremap <C-Space> <C-X><C-O>
+" inoremap <Nul> <C-X><C-O>
 
 function GetParent(item)
 	let parent = substitute(a:item, '[\/][^\/]\+[\/:]\?$', '', '')
@@ -189,6 +190,7 @@ map <F6> <ESC>:Goyo<CR>
 " Let tab be available for snipmate
 let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+let g:ycm_auto_trigger = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CtrlPHaxelibs
