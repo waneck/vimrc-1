@@ -15,4 +15,4 @@
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "sources_non_forked/ctrlp_haxelibs"]
 	path = sources_non_forked/ctrlp_haxelibs
-	url = git@github.com:waneck/ctrlp_haxelibs.git
+	url = https://github.com/waneck/ctrlp_haxelibs.git
