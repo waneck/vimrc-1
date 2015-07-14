@@ -134,14 +134,25 @@ map <C-E> :TComment<CR>
 " inoremap <Nul> <C-X><C-O>
 
 function CheckHxml()
-	if !exists("g:vaxe_hxml") || !filereadable(g:vaxe_hxml)
+	if (!exists("g:vaxe_hxml") || !filereadable(g:vaxe_hxml)) && (!exists("b:vaxe_hxml") || !filereadable(b:vaxe_hxml))
 		call vaxe#DefaultHxml()
 	endif
 endfunction
 
+function MakeProject()
+	if (!exists("g:vaxe_hxml") || !filereadable(g:vaxe_hxml)) && (!exists("b:vaxe_hxml") || !filereadable(b:vaxe_hxml))
+		call vaxe#DefaultHxml()
+	endif
+	if (!exists("g:vaxe_hxml") && exists("b:vaxe_hxml"))
+		let g:vaxe_hxml = b:vaxe_hxml
+	endif
+endfunction
+
+
 map <leader>i <ESC>:call vaxe#ImportClass()<CR>
 map <leader>hc <ESC>:call vaxe#Ctags()<CR>
-map <leader>hh <ESC>:call GetHxml(getcwd(),0)<CR>
+map <leader>hp <ESC>:call vaxe#MakeProject()<CR>
+map <leader>hh <ESC>:call vaxe#DefaultHxml()<CR>
 map <leader>ho <ESC>:call vaxe#OpenHxml()<CR>
 
 autocmd BufEnter *.hx :call CheckHxml()
