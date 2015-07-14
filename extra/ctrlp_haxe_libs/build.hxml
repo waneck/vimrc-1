@@ -1,3 +1,0 @@
--cp src
--neko bin/get_libs.n
--main Main
