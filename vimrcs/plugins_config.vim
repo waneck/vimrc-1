@@ -133,29 +133,9 @@ map <C-E> :TComment<CR>
 " inoremap <C-Space> <C-X><C-O>
 " inoremap <Nul> <C-X><C-O>
 
-function GetParent(item)
-	let parent = substitute(a:item, '[\/][^\/]\+[\/:]\?$', '', '')
-	if parent == '' || parent !~ '[\/]'
-		let parent .= '/'
-	en
-	retu parent
-endf
-
-function GetHxml(dir,depth)
-	let depth = a:depth + 1
-	let hxmls = split(glob(a:dir . "/*.hxml"), "\n")
-	if len(hxmls) > 0
-		let base_hxml = vaxe#util#InputList("Select Hxml", hxmls)
-		let g:vaxe_hxml = base_hxml
-		echo "found " . base_hxml
-		call vaxe#SetCompiler()
-		retu g:vaxe_hxml
-	else
-		let parent = GetParent(a:dir)
-		if parent != a:dir && a:depth < 10
-			retu GetHxml(parent,depth)
-		endif
-		echo "not found hxml"
+function CheckHxml()
+	if !exists("g:vaxe_hxml") || !filereadable(g:vaxe_hxml)
+		call vaxe#DefaultHxml()
 	endif
 endfunction
 
@@ -164,7 +144,7 @@ map <leader>hc <ESC>:call vaxe#Ctags()<CR>
 map <leader>hh <ESC>:call GetHxml(getcwd(),0)<CR>
 map <leader>ho <ESC>:call vaxe#OpenHxml()<CR>
 
-autocmd BufEnter *.hx :call GetHxml(getcwd(),0)
+autocmd BufEnter *.hx :call CheckHxml()
 
 if !exists('g:neocomplcache_omni_patterns')
 	let g:neocomplcache_omni_patterns = {}
