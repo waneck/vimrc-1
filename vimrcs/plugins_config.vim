@@ -182,3 +182,10 @@ let g:vaxe_trace_absolute_path = 1
 " => Goyo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <F6> <ESC>:Goyo<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Let tab be available for snipmate
+let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
