@@ -12,15 +12,6 @@ call pathogen#infect('~/.vim_runtime/sources_forked/{}')
 call pathogen#infect('~/.vim_runtime/sources_non_forked/{}')
 call pathogen#helptags()
 
-""""""""""""""""""""""""""""""
-" => bufExplorer plugin
-""""""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
-
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -192,3 +183,8 @@ au FileType cpp let g:ycm_auto_trigger = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_extensions = ['haxelibs']
 map <C-l> <ESC>:CtrlPHaxelibs<CR>
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Obsession
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" no need to config anything. yay!

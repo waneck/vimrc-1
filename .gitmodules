@@ -16,3 +16,6 @@
 [submodule "sources_non_forked/ctrlp_haxelibs"]
 	path = sources_non_forked/ctrlp_haxelibs
 	url = https://github.com/waneck/ctrlp_haxelibs.git
+[submodule "sources_non_forked/vim-obsession"]
+	path = sources_non_forked/vim-obsession
+	url = git://github.com/tpope/vim-obsession.git
