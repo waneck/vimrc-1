@@ -187,4 +187,22 @@ map <C-l> <ESC>:CtrlPHaxelibs<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Obsession
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" no need to config anything. yay!
+" Obsession
+function SetupObsession()
+  if !exists('g:my_obsession_init')
+    echom "TEST"
+    :Obsession
+    Obsession
+    let g:my_obsession_init = 1
+  endif
+endfunction
+
+autocmd VimEnter * call SetupObsession()
+
+" augroup sourcesession
+"         autocmd!
+"         autocmd VimEnter * nested
+"         \ if !argc() && empty(v:this_session) && filereadable('Session.vim') |
+"         \   source Session.vim |
+"         \ endif
+" augroup END
