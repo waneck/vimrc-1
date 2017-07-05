@@ -189,10 +189,9 @@ map <C-l> <ESC>:CtrlPHaxelibs<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Obsession
 function SetupObsession()
-  if !exists('g:my_obsession_init')
+  if (!exists('g:my_obsession_init') && !exists('g:this_obsession'))
     echom "TEST"
     :Obsession
-    Obsession
     let g:my_obsession_init = 1
   endif
 endfunction
